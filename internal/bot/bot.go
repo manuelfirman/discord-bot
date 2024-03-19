@@ -14,9 +14,10 @@ var (
 	goBot *discordgo.Session
 )
 
+// Run starts the bot
 func Run() {
 	// Create a new Discord session using the provided bot token.
-	goBot, err := discordgo.New("Bot" + config.Token)
+	goBot, err := discordgo.New("Bot " + config.Token)
 	if err != nil {
 		println(err.Error())
 		return
@@ -46,6 +47,7 @@ func Run() {
 	fmt.Println("Bot is running! Press CTRL-C to exit.")
 }
 
+// messageHandler handles the messages
 func messageHandler(s *discordgo.Session, m *discordgo.MessageCreate) {
 	// Ignore all messages created by the bot itself
 	if m.Author.ID == BotID {
@@ -58,17 +60,19 @@ func messageHandler(s *discordgo.Session, m *discordgo.MessageCreate) {
 	switch m.Content {
 	case config.BotPrefix:
 		message = "I'm here!"
-	case "ping":
+	case config.BotPrefix + "ping":
 		message = "Pong!"
-	case "pong":
+	case config.BotPrefix + "pong":
 		message = "Ping!"
-	case "hello":
+	case config.BotPrefix + "hello":
 		message = "Hi!"
-	case "bye":
+	case config.BotPrefix + "bye":
 		message = "Goodbye!"
-	case "music":
+	case config.BotPrefix + "meme":
+		message = "Y EL MATEI?????"
+	case config.BotPrefix + "music":
 		message = "https://www.youtube.com/watch?v=E17hDWJKBsY&t=368s"
-	case "help":
+	case config.BotPrefix + "help":
 		message = "I'm here to help you! You can use the following commands: \n" + config.BotPrefix + "ping \n" + config.BotPrefix + "pong \n" + config.BotPrefix + "hello \n" + config.BotPrefix + "bye \n" + config.BotPrefix + "music"
 	default:
 		message = "I don't understand that command. Try " + config.BotPrefix + "help" + " for a list of commands"
