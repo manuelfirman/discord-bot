@@ -1,0 +1,2 @@
+$env:TOKEN = "valor_del_token"
+$env:BOT_PREFIX = "valor_del_prefijo"

@@ -1,8 +1,11 @@
-# Discord Bot
+# Discord Bot :computer:
 
 #### :link: [Discord Developers Doc](https://discord.com/developers/docs/intro)
 
+**Important** :exclamation:
 We need to have a Discord account and a Server with **Admin's role**. We also need to activate **developer mode** in Discord Configurations/Advanced.
+
+---
 
 ### Steps
 ```mermaid
@@ -22,9 +25,8 @@ subgraph Step by step
     E --> F
 end
 ```
----
 
-#### 1. Create a Discord App
+#### 1. Create a Discord App 
 :link: [Discord Applications](https://discord.com/developers/applications)
 - Click on "New Application" button.
 - Choice a name to the app and create.
@@ -52,5 +54,12 @@ In tab **Bot**:
 #### 5. Add bot to a channel using the URL
 
 :link: https://discord.com/oauth2/authorize?client_id=[client_id]&permissions=[permissions]&scope=bot
+
+
+#### 6. Set application test mod 
+To make test's in the app, we need to set `Application Test Mode` on:
+- Enter the app identifier (ID)
+- Select URL origin (Local)
+- Set the `server port` (8080)
 
 ---
