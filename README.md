@@ -1,3 +1,7 @@
+## :arrow_forward: Basic Discord Bot 
+
+
+
 1. Set the enviroment variables in `.ps1` file (use .bashrc or .zshrc if you're using Linux/MacOS)
 
 Powershell (`.ps1`)
@@ -24,3 +28,9 @@ Unix/Linux
 source .bashrc  # for .bashrc files
 source .zshrc   # for .zshrc files
 ```
+
+--- 
+
+#### Acknowledgements :blue_heart:
+
+This project utilizes the packages :link: [DiscordGo](https://github.com/bwmarrin/discordgo) 
